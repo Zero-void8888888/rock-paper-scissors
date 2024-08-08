@@ -7,28 +7,27 @@
 </head>
 <body>
     <script>
-        let user1 = parseInt(prompt("hello please enter rock paper or scissors for input"))
-        let user2 = parseInt(prompt("hello please enter rock paper or scissors for input"))
+        let user1 = prompt("hello please enter rock paper or scissors for input")
+        let user2 = prompt("hello please enter rock paper or scissors for input")
         
         if(user1 == "rock" && user2 == "scissors" ){
-            console.log("rock wins=");
+            console.log("rock wins");
         }
 
         else if(user1 == "rock" && user2 == "rock" ||  user1 == "paper" && user2 == "paper" || user1 == "scissors" && user2 == "scissors" ){
            console.log("draw");
+        }
+        else if(user1 == "scissors" && user2 == "paper" ){
+            console.log("scissors wins");
         }
         else
             {
             console.log("paper wins");
         }
 
-        if(user1 == "scissors" && user2 == "paper" ){
-            console.log("scissors wins");
-        }
+        
 
-        if(user1 == "paper" && user2 == "" ){
-            console.log("rock wins=");
-        }
+       
 
 
 
