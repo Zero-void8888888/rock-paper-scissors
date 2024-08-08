@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<meta charset="UTF-8" >
+<title>rock paper scissors</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        let user1 = parseInt(prompt("hello please enter rock paper or scissors for input"))
+        let user2 = parseInt(prompt("hello please enter rock paper or scissors for input"))
+        
+        if(user1 == "rock" && user2 == "scissors" ){
+            console.log("rock wins=");
+        }
+
+        else if(user1 == "rock" && user2 == "rock" ||  user1 == "paper" && user2 == "paper" || user1 == "scissors" && user2 == "scissors" ){
+           console.log("draw");
+        }
+        else
+            {
+            console.log("you lose, user1");
+        }
+
+    </script>
+
+</body>
+
+</html>
+
