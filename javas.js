@@ -32,27 +32,34 @@ let humanScore = 0;
 let div = document.createElement("div");
 
 function playRound(humanChoice,computerChoice){
+    if(humanScore == 5){
+        div.innerHTML = `<p> the human wins the game </p>  <p> human score:${humanScore} and computer score: ${computerScore}</p> `;
 
-  if(humanChoice == "rock" && computerChoice == "scissors" || humanChoice == "paper" && computerChoice == "rock"|| humanChoice == "scissors" && computerChoice == "paper"){
-      div.innerHTML = `<p> human wins</p>  <p> human score:${humanScore} and computer score: ${computerScore}</p> `;
-      humanScore +=1;
+      }
+  else if(computerScore == 5){
+        div.innerHTML = `<p> the computer wins the game </p>  <p> human score:${humanScore} and computer score: ${computerScore}</p> `;
+
+      }
+  else if(humanChoice == "rock" && computerChoice == "scissors" || humanChoice == "paper" && computerChoice == "rock"|| humanChoice == "scissors" && computerChoice == "paper"){
+        humanScore +=1;
+        div.innerHTML = `<p> human wins</p>  <p> human score:${humanScore} and computer score: ${computerScore}</p> `;
+        
       
   }
 
   else if(humanChoice == computerChoice ){
     div.innerHTML = `<p> draw </p>  <p> human score:${humanScore} and computer score: ${computerScore}</p> `;
-   
-  
-
-
 }
-else{
-      div.innerHTML = `<p> computer wins</p>  <p> human score:${humanScore} and computer score: ${computerScore}</p> `;
+else{ 
       computerScore +=1;
+      div.innerHTML = `<p> computer wins</p>  <p> human score:${humanScore} and computer score: ${computerScore}</p> `
+      
+      
+  }
       
 }
 
-}
+
 
 let button1 = document.createElement("button");
     let button2 = document.createElement("button");
@@ -64,11 +71,10 @@ let button1 = document.createElement("button");
     button2.textContent = "paper";
     button3.textContent = "scissors";
     
-
     button1.addEventListener("click",()=>playRound("rock",getComputerChoice()));
     button2.addEventListener("click",()=>playRound("paper",getComputerChoice()));
     button3.addEventListener("click",()=>playRound("scissors",getComputerChoice()));
-
+    
     
     page.appendChild(button1);
     page.appendChild(button2);
